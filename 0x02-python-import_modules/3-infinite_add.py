@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import sys
+    from sys import argv
     solution = 0
-    for i in range(len(sys.argv - 1)):
-        solution += int(sys.argv[i] + 1)
+    temp = 0
+    for i in range(1, len(sys.argv)):
+        number = int(sys.argv[i])
+        number2 = number + temp
+        solution = number
     print("{}".format(solution))
