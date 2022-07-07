@@ -2,6 +2,6 @@
 if __name__ == "__main__":
     import sys
     solution = 0
-    for i in range(1,len(sys.argv)):
-        solution += int(sys.argv[i])
+    for i in range(len(sys.argv - 1)):
+        solution += int(sys.argv[i] + 1)
     print("{}".format(solution))
