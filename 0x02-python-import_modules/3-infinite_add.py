@@ -4,5 +4,5 @@ if __name__ == "__main__":
     number = len(1, argv)
     addition = 0
     for i in range(1, number):
-        addition += number
+        addition += int(argv[number])
     print("{}".format(addition))
