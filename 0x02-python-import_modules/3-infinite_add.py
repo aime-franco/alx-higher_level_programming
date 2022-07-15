@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from sys import argv
-    args_number = len(argv)
+    import sys
     addition = 0
-    for i in range(1, args_number):
-        addition += int(argv[i])
+    for i in range(len(argv) - 1):
+        addition += int(argv[i + 1])
     print("{}".format(addition))
