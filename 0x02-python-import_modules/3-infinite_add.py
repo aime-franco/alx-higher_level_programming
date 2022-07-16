@@ -6,6 +6,6 @@ if __name__ == "__main__":
         for i in sys.argv:
             if i != sys.argv:
                 c += int(i)
-        print("{}".format(c))
+        print("{:d}".format(c))
     else:
         print(0)
