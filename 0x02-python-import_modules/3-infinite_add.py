@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+import sys
 if __name__ == "__main__":
-    import sys
-    addition = 0
-    for i in range(len(argv) - 1):
-        addition += int(argv[i + 1])
-    print("{}".format(addition))
+    if len(sys.argv) > 1:
+        a = 0
+        for i in sys.argv:
+            if i != sys.argv:
+                c += int(i)
+        print("{}".format(c))
+    else:
+        print(0)
