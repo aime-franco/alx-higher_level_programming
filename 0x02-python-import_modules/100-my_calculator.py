@@ -1,21 +1,48 @@
+able File  46 lines (37 sloc)  1.06 KB
+
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from calculator import add, sub, mul, div
     from sys import argv
-    args = sys.argv
-    if len(args) != 4:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-    sys.exit(1)
-    if args[2] != "+" and args != "*" and args != "/" and args != "-":
+    from calculator_1 import add, sub, mul, div
+
+    count = len(argv)
+
+    if count != 4:
+        print("Usage: {} <a> <operator> <b>".format(argv[0]))
+        exit(1)
+
+    num1 = int(argv[1])
+    num2 = int(argv[3])
+    op = argv[2]
+
+    def not_found():
         print("Unknown operator. Available operators: +, -, * and /")
-    sys.exit(1)
-    a = int(args[1])
-    b = int(args[3])
-    if args[2] == "+":
-        print("{:d} {:d} = {:d}".format(a,args[2], b, add(a, b)))
-    elif args[2] == "-":
-        print("{:d} {:d} = {:d}".format(a, args[2], b, sub(a, b)))
-    elif args[2] == "*":
-        print("{:d} {:d} = {:d}".format(a, args[2], b, mul(a, b)))
-    elif args[2] == "/":
-        print("{:d} {:d} = {:d}".format(a, args[2], b, div(a, b)))
+        exit(1)
+
+    def my_add():
+        total = add(num1, num2)
+        print("{:d} + {:d} = {:d}".format(num1, num2, total))
+        return total
+
+    def my_sub():
+        total = sub(num1, num2)
+        print("{:d} - {:d} = {:d}".format(num1, num2, total))
+        return total
+
+    def my_mul():
+        total = mul(num1, num2)
+        print("{:d} * {:d} = {:d}".format(num1, num2, total))
+        return total
+
+    def my_div():
+        total = div(num1, num2)
+        print("{:d} / {:d} = {:d}".format(num1, num2, total))
+        return total
+
+    options = {
+        "+": my_add,
+        "-": my_sub,
+        "*": my_mul,
+        "/": my_div
+    }
+    options.get(op, not_found)()
