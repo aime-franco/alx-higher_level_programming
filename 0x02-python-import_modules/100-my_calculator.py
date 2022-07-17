@@ -13,10 +13,10 @@ if __name__ == "__main__":
     a = int(args[2])
     b = int(args[2])
     if args[2] == "+":
-        print("{:d} + { :d} = { :d}".format(a, args[2], b, add(a, b)))
+        print("{:d}  { :d} = { :d}".format(a, args[2], b, add(a, b)))
     elif args[2] == "-":
-        print("{:d} - { :d} = { :d}".format(a, args[2], b, sub(a, b)))
+        print("{:d}  { :d} = { :d}".format(a, args[2], b, sub(a, b)))
     elif args[2] == "*":
-        print("{:d} * { :d} = { :d}".format(a, args[2], b, mul(a, b)))
+        print("{:d}  { :d} = { :d}".format(a, args[2], b, mul(a, b)))
     elif args[2] == "/":
-        print("{:d} / { :d} = { :d}".format(a, args[2], b, div(a, b)))
+        print("{:d}  { :d} = { :d}".format(a, args[2], b, div(a, b)))
