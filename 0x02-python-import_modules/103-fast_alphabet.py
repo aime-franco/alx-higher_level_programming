@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 import string
-print(string.ascii_uppercase)
+for letters in string.ascii_uppercase:
+    print(letters, end=" ")
