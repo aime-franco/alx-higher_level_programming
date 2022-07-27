@@ -6,4 +6,3 @@ def multiple_returns(sentence):
     else:
         Mytuple = len(sentence), sentence[0]
     return Mytuple
-     
