@@ -4,5 +4,5 @@ def print_sorted_dicitionary(a_dictionary):
     for item in a_dictionary:
         new_string.append(item)
     new_string.sort()
-    for i in new_string:
-        print("{:s}: {}".format(i,  a_dictionary[i]))
+    for item in new_string:
+        print("{:s}: {}".format(item,  a_dictionary[item]))
